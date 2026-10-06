@@ -98,7 +98,7 @@
 		"enabled": false
 	},
 	"beianCard": {
-		"width": 340,
+		"width": 200,
 		"height": 60,
 		"order": 11,
 		"offsetX": null,
