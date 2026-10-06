@@ -49,6 +49,15 @@ export default function MusicCard() {
 
 	const { x, y } = position
 
+	const currentTitle = useMemo(() => {
+		const file = MUSIC_FILES[currentIndex] || ''
+		const name = file.split('/').pop() || ''
+		return name
+			.replace(/\.[^/.]+$/, '')
+			.replace(/-/g, ' ')
+			.replace(/\b\w/g, c => c.toUpperCase())
+	}, [currentIndex])
+
 	// Initialize audio element
 	useEffect(() => {
 		if (!audioRef.current) {
@@ -64,7 +73,18 @@ export default function MusicCard() {
 		}
 
 		const handleEnded = () => {
-			const nextIndex = (currentIndexRef.current + 1) % MUSIC_FILES.length
+			if (MUSIC_FILES.length <= 1) {
+				// 只有一首歌时单曲循环
+				audio.currentTime = 0
+				audio.play().catch(console.error)
+				setProgress(0)
+				return
+			}
+			// 随机播放：随机选一首不同于当前的歌
+			let nextIndex = currentIndexRef.current
+			while (nextIndex === currentIndexRef.current) {
+				nextIndex = Math.floor(Math.random() * MUSIC_FILES.length)
+			}
 			currentIndexRef.current = nextIndex
 			setCurrentIndex(nextIndex)
 			setProgress(0)
@@ -126,7 +146,16 @@ export default function MusicCard() {
 		}
 	}, [])
 
+	const hasStartedRef = useRef(false)
+
 	const togglePlayPause = () => {
+		// 第一次点播放时随机选一首
+		if (!isPlaying && !hasStartedRef.current && MUSIC_FILES.length > 1) {
+			hasStartedRef.current = true
+			const idx = Math.floor(Math.random() * MUSIC_FILES.length)
+			currentIndexRef.current = idx
+			setCurrentIndex(idx)
+		}
 		setIsPlaying(!isPlaying)
 	}
 
@@ -158,7 +187,7 @@ export default function MusicCard() {
 				<MusicSVG className='h-8 w-8' />
 
 				<div className='flex-1'>
-					<div className='text-secondary text-sm'>Close To You</div>
+					<div className='text-secondary text-sm'>{currentTitle}</div>
 
 					<div className='mt-1 h-2 rounded-full bg-white/60'>
 						<div className='bg-linear h-full rounded-full transition-all duration-300' style={{ width: `${progress}%` }} />

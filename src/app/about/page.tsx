@@ -109,7 +109,7 @@ export default function Page() {
 						isPreviewMode ? (
 							<div className='space-y-6'>
 								<div className='text-center'>
-									<h1 className='mb-4 text-4xl font-bold'>{data.title || '标题预览'}</h1>
+									<h1 className='mb-4 text-6xl font-bold tracking-wide max-sm:text-4xl'>{data.title || '标题预览'}</h1>
 									<p className='text-secondary text-lg'>{data.description || '描述预览'}</p>
 								</div>
 
@@ -153,7 +153,7 @@ export default function Page() {
 					) : (
 						<>
 							<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className='mb-12 text-center'>
-								<h1 className='mb-4 text-4xl font-bold'>{data.title}</h1>
+								<h1 className='mb-4 text-6xl font-bold tracking-wide max-sm:text-4xl'>{data.title}</h1>
 								<p className='text-secondary text-lg'>{data.description}</p>
 							</motion.div>
 
@@ -169,7 +169,7 @@ export default function Page() {
 
 					<div className='mt-8 flex items-center justify-center gap-6'>
 						<motion.a
-							href='https://github.com/YYsuni/2025-blog-public'
+							href='https://github.com/HHHOUBOHAN/2025-blog-public'
 							target='_blank'
 							rel='noreferrer'
 							initial={{ opacity: 0, scale: 0.6 }}
