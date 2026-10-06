@@ -72,8 +72,14 @@
 	"currentHatIndex": 3,
 	"hatFlipped": false,
 	"enableChristmas": false,
-	"beian": {
-		"text": "",
-		"link": ""
-	}
+	"beian": [
+		{
+			"text": "豫ICP备2026007336号",
+			"link": "https://beian.miit.gov.cn/"
+		},
+		{
+			"text": "萌ICP备20266900号",
+			"link": "https://icp.gov.moe/"
+		}
+	]
 }
