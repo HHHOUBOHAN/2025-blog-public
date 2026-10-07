@@ -57,6 +57,13 @@
 			"order": 2
 		},
 		{
+			"id": "juejin",
+			"type": "juejin",
+			"value": "https://juejin.cn/user/4316047110320793",
+			"label": "掘金",
+			"order": 4
+		},
+		{
 			"id": "email",
 			"type": "email",
 			"value": "3420579752@qq.com",
