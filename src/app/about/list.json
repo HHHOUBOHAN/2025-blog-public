@@ -1,5 +1,5 @@
 {
 	"title": "hbh0137",
 	"description": "",
-	"content": "📦网站基于 Github 仓库完全存储，所有内容版本可控\n\n🚀无后端，无 serverless function，纯静态站点\n\n✏️文章通过可视化 UI 直接编辑并提交到 Github 仓库\n\n🔑所有用户都可以编辑，提交需要 Owner 的 Private Key\n\n## 技术栈\n\n- Next.js\n- React\n- TypeScript\n- Tailwind CSS\n- Motion\n- Github API"
+	"content": "Hi! ✨ I'm hbh0137\n- 🌱 Interested in coding, embedded systems and interesting ideas.\n- 💻 Learning by building, debugging and documenting everything along the way.\n- 📝 This site is my personal archive for notes, projects and thoughts.\n- 🚀 I enjoy turning ideas into real things, one small step at a time.\n- 🤝 Feel free to explore, share ideas, or just say hi.\n“Build things, learn things, leave something behind.”  \n“Keep learning. Keep creating.”"
 }
