@@ -33,7 +33,7 @@
 			"url": "/images/art/1c7b726fe720679b.jpg"
 		}
 	],
-	"currentArtImageId": "1c7b726fe720679b",
+	"currentArtImageId": "cat",
 	"backgroundImages": [
 		{
 			"id": "",
@@ -78,7 +78,7 @@
 			"link": "https://beian.miit.gov.cn/"
 		},
 		{
-			"text": "sdfggh",
+			"text": "",
 			"link": ""
 		}
 	]
