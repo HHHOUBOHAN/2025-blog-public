@@ -28,11 +28,19 @@ export default function BeianCard() {
 					<Fragment key={index}>
 						{index > 0 && <span className='text-secondary/50 text-xs'>|</span>}
 						{item.link ? (
-							<Link href={item.link} target='_blank' rel='noopener noreferrer' className='text-secondary text-xs whitespace-nowrap transition-opacity hover:opacity-80'>
+							<Link
+								href={item.link}
+								target='_blank'
+								rel='noopener noreferrer'
+								className='text-secondary flex items-center gap-1 text-xs whitespace-nowrap transition-opacity hover:opacity-80'>
+								{item.icon && <img src={item.icon} alt='' className='h-3.5 w-3.5' />}
 								{item.text}
 							</Link>
 						) : (
-							<span className='text-secondary text-xs whitespace-nowrap'>{item.text}</span>
+							<span className='text-secondary flex items-center gap-1 text-xs whitespace-nowrap'>
+								{item.icon && <img src={item.icon} alt='' className='h-3.5 w-3.5' />}
+								{item.text}
+							</span>
 						)}
 					</Fragment>
 				))}

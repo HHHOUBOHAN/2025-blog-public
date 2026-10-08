@@ -82,11 +82,13 @@
 	"beian": [
 		{
 			"text": "豫ICP备2026048348号",
-			"link": "https://beian.miit.gov.cn/"
+			"link": "https://beian.miit.gov.cn/",
+			"icon": ""
 		},
 		{
-			"text": "",
-			"link": ""
+			"text": "豫公网安备41140302000322号",
+			"link": "https://beian.mps.gov.cn/#/query/webSearch?code=41140302000322",
+			"icon": "/images/beian.png"
 		}
 	]
 }
